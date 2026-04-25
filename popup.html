@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --primary: #007AFF;
+      --bg: #F2F2F7;
+      --card: #FFFFFF;
+      --text: #000000;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card: #1C1C1E;
+        --text: #FFFFFF;
+      }
+    }
+    body {
+      width: 280px;
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    h2 {
+      margin: 0 0 16px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .setting {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      background: var(--card);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .setting-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .setting-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .setting-desc {
+      font-size: 11px;
+      opacity: 0.6;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: var(--primary);
+    }
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+    .footer {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 10px;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+    <img src="icon.png" style="width: 40px; height: 40px; border-radius: 8px;">
+    <h2 style="margin: 0;">YT AlwaysOnTop</h2>
+  </div>
+  
+  <div class="setting">
+    <div class="setting-info">
+      <span class="setting-title">Always-on-Top (PiP)</span>
+      <span class="setting-desc">Force edgeless floating window</span>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="preferPiP">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="setting">
+    <div class="setting-info">
+      <span class="setting-title">Auto-PiP</span>
+      <span class="setting-desc">Switch tabs to float video</span>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="autoPiP">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="setting">
+    <div class="setting-info">
+      <span class="setting-title">Quality Lock</span>
+      <span class="setting-desc">Always stay in HD</span>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="qualityLock">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="footer">
+    YT AlwaysOnTop v1.0.0<br>
+    Made with &#10084;&#65039; by <a href="https://x.com/snc0x" target="_blank" style="color: inherit; text-decoration: underline;">snc0x</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

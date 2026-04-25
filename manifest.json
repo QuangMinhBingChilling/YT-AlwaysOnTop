@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YT AlwaysOnTop",
+  "version": "1.0.0",
+  "description": "Truly edgeless, Always-on-Top Picture-in-Picture for YouTube. Work while you watch!",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "icons": {
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/watch*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "toggle-pip": {
+      "suggested_key": {
+        "default": "Alt+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Toggle Truly Edgeless PiP"
+    }
+  }
+}
